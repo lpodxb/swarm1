@@ -1,0 +1,13 @@
+application:
+  environment: "development"
+  logging:
+    level: "INFO"
+
+trading:
+  engine:
+    accounts:
+      - id: "BINANCE-FUTURES-TESTNET"
+        type: "simulated"
+        base_currency: "USDT"
+        leverage: 3.0
+        starting_balance: 10000

@@ -1,0 +1,752 @@
+2025-11-19 20:48:05.063 | INFO     | __main__:__init__:67 - AI Trading Swarm v2.5 starting...
+2025-11-19 20:48:05.075 | INFO     | lab.storage:init_db:80 - Adding "status" column to strategies table (default=experimental)
+2025-11-19 20:48:05.077 | INFO     | lab.storage:init_db:90 - Lab DB initialized at data/lab.db
+2025-11-19 20:48:05.081 | INFO     | journal.storage:init_db:55 - Journal DB initialized at data/journal.db
+2025-11-19 20:48:05.081 | WARNING  | context.pair_context:refresh_approved_strategies:26 - [PairContext] BTC/USDT 15m: no approved strategies found.
+2025-11-19 20:48:05.081 | INFO     | context.pair_context:build_contexts_from_config:77 - [Context] Built 1 pair contexts from config.
+2025-11-19 20:48:05.081 | INFO     | __main__:__init__:82 - Active contexts: BTC/USDT 15m
+2025-11-19 20:48:05.081 | INFO     | infrastructure.gpu_scheduler:__init__:11 - GPUSingleScheduler initialized (stub).
+2025-11-19 20:48:05.082 | INFO     | infrastructure.gpu_lru:__init__:8 - GPULRUManager initialized (stub).
+2025-11-19 20:48:05.085 | INFO     | agents.memory:__init__:58 - AgentMemory initialized for one:llama3.1:70b-instruct-q4_K_M @ data/memory/one/memory.sqlite
+2025-11-19 20:48:05.085 | INFO     | agents.base_agent:__init__:38 - TechnicalNewsAgent initialized for role=one, model=llama3.1:70b-instruct-q4_K_M
+2025-11-19 20:48:05.089 | INFO     | agents.memory:__init__:58 - AgentMemory initialized for two:mixtral:8x7b-instruct-v0.1-q4_K_M @ data/memory/two/memory.sqlite
+2025-11-19 20:48:05.089 | INFO     | agents.base_agent:__init__:38 - SentimentAnalyzerAgent initialized for role=two, model=mixtral:8x7b-instruct-v0.1-q4_K_M
+2025-11-19 20:48:05.094 | INFO     | agents.memory:__init__:58 - AgentMemory initialized for three:phi4:latest @ data/memory/three/memory.sqlite
+2025-11-19 20:48:05.094 | INFO     | agents.base_agent:__init__:38 - RiskManagerAgent initialized for role=three, model=phi4:latest
+2025-11-19 20:48:05.098 | INFO     | agents.memory:__init__:58 - AgentMemory initialized for four:qwen2.5:14b-instruct-q5_K_M @ data/memory/four/memory.sqlite
+2025-11-19 20:48:05.098 | INFO     | agents.base_agent:__init__:38 - StrategyDeveloperAgent initialized for role=four, model=qwen2.5:14b-instruct-q5_K_M
+2025-11-19 20:48:05.098 | INFO     | __main__:_init_agents:156 - Agents initialized: one, two, three, four
+2025-11-19 20:48:05.098 | INFO     | agents.consensus_engine:__init__:38 - EnhancedConsensusEngine initialized (asset=BTC)
+2025-11-19 20:48:05.098 | INFO     | onchain.whale_tracker:__init__:11 - OnChainIntelEngine initialized (stub).
+2025-11-19 20:48:05.098 | INFO     | options.flow_analyzer:__init__:11 - OptionsFlowAnalyzer initialized (stub).
+2025-11-19 20:48:05.098 | INFO     | social.telegram_scraper:__init__:10 - TelegramScraper initialized (stub).
+2025-11-19 20:48:05.098 | INFO     | trading.execution_engine:__init__:63 - ExecutionEngine initialized (Nautilus available=False, testnet=True, config=configs/nautilus_binance_testnet.yaml)
+2025-11-19 20:48:05.098 | INFO     | journal.storage:init_db:55 - Journal DB initialized at data/journal.db
+2025-11-19 20:48:05.099 | INFO     | journal.engine:__init__:20 - JournalEngine initialized.
+2025-11-19 20:48:05.103 | INFO     | __main__:_init_exchange:174 - CCXT exchange initialized: binance
+2025-11-19 20:48:05.103 | SUCCESS  | __main__:__init__:127 - TradingSwarmV25 fully initialized.
+2025-11-19 20:48:05.165 | INFO     | infrastructure.gpu_scheduler:initialize_models:17 - CUDA available; GPU ready for LLM offload.
+2025-11-19 20:48:05.165 | INFO     | events.event_bus:run:31 - EventBus running...
+2025-11-19 20:48:05.165 | DEBUG    | infrastructure.gpu_lru:periodic_maintenance:11 - GPULRUManager maintenance loop started ( stub ).
+2025-11-19 20:48:05.166 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 1 @ 2025-11-19T17:48:05.166005
+2025-11-19 20:48:05.166 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=1)
+2025-11-19 20:48:05.166 | WARNING  | context.pair_context:refresh_approved_strategies:26 - [PairContext] BTC/USDT 15m: no approved strategies found.
+2025-11-19 20:48:05.166 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 20:48:35.182 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 2 @ 2025-11-19T17:48:35.182352
+2025-11-19 20:48:35.182 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=2)
+2025-11-19 20:48:35.182 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 20:49:05.183 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 3 @ 2025-11-19T17:49:05.183721
+2025-11-19 20:49:05.183 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=3)
+2025-11-19 20:49:05.184 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 20:49:35.200 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 4 @ 2025-11-19T17:49:35.200028
+2025-11-19 20:49:35.200 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=4)
+2025-11-19 20:49:35.200 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 20:50:05.200 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 5 @ 2025-11-19T17:50:05.200737
+2025-11-19 20:50:05.201 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=5)
+2025-11-19 20:50:05.201 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 20:50:35.217 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 6 @ 2025-11-19T17:50:35.217123
+2025-11-19 20:50:35.217 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=6)
+2025-11-19 20:50:35.217 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 20:51:05.218 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 7 @ 2025-11-19T17:51:05.218006
+2025-11-19 20:51:05.218 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=7)
+2025-11-19 20:51:05.218 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 20:51:35.234 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 8 @ 2025-11-19T17:51:35.234420
+2025-11-19 20:51:35.234 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=8)
+2025-11-19 20:51:35.234 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 20:52:05.235 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 9 @ 2025-11-19T17:52:05.235930
+2025-11-19 20:52:05.236 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=9)
+2025-11-19 20:52:05.236 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 20:52:35.252 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 10 @ 2025-11-19T17:52:35.252236
+2025-11-19 20:52:35.252 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=10)
+2025-11-19 20:52:35.252 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 20:53:05.253 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 11 @ 2025-11-19T17:53:05.253318
+2025-11-19 20:53:05.253 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=11)
+2025-11-19 20:53:05.253 | WARNING  | context.pair_context:refresh_approved_strategies:26 - [PairContext] BTC/USDT 15m: no approved strategies found.
+2025-11-19 20:53:05.253 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 20:53:35.270 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 12 @ 2025-11-19T17:53:35.270051
+2025-11-19 20:53:35.270 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=12)
+2025-11-19 20:53:35.270 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 20:54:05.270 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 13 @ 2025-11-19T17:54:05.270740
+2025-11-19 20:54:05.270 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=13)
+2025-11-19 20:54:05.271 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 20:54:35.287 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 14 @ 2025-11-19T17:54:35.287008
+2025-11-19 20:54:35.287 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=14)
+2025-11-19 20:54:35.287 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 20:55:05.288 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 15 @ 2025-11-19T17:55:05.288421
+2025-11-19 20:55:05.288 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=15)
+2025-11-19 20:55:05.288 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 20:55:35.304 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 16 @ 2025-11-19T17:55:35.304662
+2025-11-19 20:55:35.304 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=16)
+2025-11-19 20:55:35.304 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 20:56:05.306 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 17 @ 2025-11-19T17:56:05.306181
+2025-11-19 20:56:05.306 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=17)
+2025-11-19 20:56:05.306 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 20:56:35.322 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 18 @ 2025-11-19T17:56:35.322411
+2025-11-19 20:56:35.322 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=18)
+2025-11-19 20:56:35.322 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 20:56:39.658 | WARNING  | __main__:_handle_signal:453 - Shutdown signal received: 2
+2025-11-19 20:56:50.455 | WARNING  | __main__:start:200 - Stop event received, shutting down...
+2025-11-19 21:05:16.956 | INFO     | __main__:__init__:67 - AI Trading Swarm v2.5 starting...
+2025-11-19 21:05:16.959 | INFO     | lab.storage:init_db:90 - Lab DB initialized at data/lab.db
+2025-11-19 21:05:16.959 | INFO     | journal.storage:init_db:55 - Journal DB initialized at data/journal.db
+2025-11-19 21:05:16.959 | WARNING  | context.pair_context:refresh_approved_strategies:26 - [PairContext] BTC/USDT 15m: no approved strategies found.
+2025-11-19 21:05:16.959 | INFO     | context.pair_context:build_contexts_from_config:77 - [Context] Built 1 pair contexts from config.
+2025-11-19 21:05:16.959 | INFO     | __main__:__init__:82 - Active contexts: BTC/USDT 15m
+2025-11-19 21:05:16.959 | INFO     | infrastructure.gpu_scheduler:__init__:11 - GPUSingleScheduler initialized (stub).
+2025-11-19 21:05:16.959 | INFO     | infrastructure.gpu_lru:__init__:8 - GPULRUManager initialized (stub).
+2025-11-19 21:05:16.959 | INFO     | agents.memory:__init__:58 - AgentMemory initialized for one:llama3.1:70b-instruct-q4_K_M @ data/memory/one/memory.sqlite
+2025-11-19 21:05:16.959 | INFO     | agents.base_agent:__init__:38 - TechnicalNewsAgent initialized for role=one, model=llama3.1:70b-instruct-q4_K_M
+2025-11-19 21:05:16.960 | INFO     | agents.memory:__init__:58 - AgentMemory initialized for two:mixtral:8x7b-instruct-v0.1-q4_K_M @ data/memory/two/memory.sqlite
+2025-11-19 21:05:16.960 | INFO     | agents.base_agent:__init__:38 - SentimentAnalyzerAgent initialized for role=two, model=mixtral:8x7b-instruct-v0.1-q4_K_M
+2025-11-19 21:05:16.960 | INFO     | agents.memory:__init__:58 - AgentMemory initialized for three:phi4:latest @ data/memory/three/memory.sqlite
+2025-11-19 21:05:16.960 | INFO     | agents.base_agent:__init__:38 - RiskManagerAgent initialized for role=three, model=phi4:latest
+2025-11-19 21:05:16.960 | INFO     | agents.memory:__init__:58 - AgentMemory initialized for four:qwen2.5:14b-instruct-q5_K_M @ data/memory/four/memory.sqlite
+2025-11-19 21:05:16.960 | INFO     | agents.base_agent:__init__:38 - StrategyDeveloperAgent initialized for role=four, model=qwen2.5:14b-instruct-q5_K_M
+2025-11-19 21:05:16.960 | INFO     | __main__:_init_agents:156 - Agents initialized: one, two, three, four
+2025-11-19 21:05:16.960 | INFO     | agents.consensus_engine:__init__:38 - EnhancedConsensusEngine initialized (asset=BTC)
+2025-11-19 21:05:16.960 | INFO     | onchain.whale_tracker:__init__:11 - OnChainIntelEngine initialized (stub).
+2025-11-19 21:05:16.960 | INFO     | options.flow_analyzer:__init__:11 - OptionsFlowAnalyzer initialized (stub).
+2025-11-19 21:05:16.960 | INFO     | social.telegram_scraper:__init__:10 - TelegramScraper initialized (stub).
+2025-11-19 21:05:16.961 | INFO     | trading.execution_engine:__init__:63 - ExecutionEngine initialized (Nautilus available=False, testnet=True, config=configs/nautilus_binance_testnet.yaml)
+2025-11-19 21:05:16.961 | INFO     | journal.storage:init_db:55 - Journal DB initialized at data/journal.db
+2025-11-19 21:05:16.961 | INFO     | journal.engine:__init__:20 - JournalEngine initialized.
+2025-11-19 21:05:16.965 | INFO     | __main__:_init_exchange:174 - CCXT exchange initialized: binance
+2025-11-19 21:05:16.965 | SUCCESS  | __main__:__init__:127 - TradingSwarmV25 fully initialized.
+2025-11-19 21:05:17.052 | INFO     | infrastructure.gpu_scheduler:initialize_models:17 - CUDA available; GPU ready for LLM offload.
+2025-11-19 21:05:17.052 | INFO     | events.event_bus:run:31 - EventBus running...
+2025-11-19 21:05:17.052 | DEBUG    | infrastructure.gpu_lru:periodic_maintenance:11 - GPULRUManager maintenance loop started ( stub ).
+2025-11-19 21:05:17.052 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 1 @ 2025-11-19T18:05:17.052948
+2025-11-19 21:05:17.053 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=1)
+2025-11-19 21:05:17.053 | WARNING  | context.pair_context:refresh_approved_strategies:26 - [PairContext] BTC/USDT 15m: no approved strategies found.
+2025-11-19 21:05:17.053 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 21:05:47.069 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 2 @ 2025-11-19T18:05:47.069477
+2025-11-19 21:05:47.069 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=2)
+2025-11-19 21:05:47.069 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 21:06:17.070 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 3 @ 2025-11-19T18:06:17.070983
+2025-11-19 21:06:17.071 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=3)
+2025-11-19 21:06:17.071 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 21:06:47.087 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 4 @ 2025-11-19T18:06:47.087277
+2025-11-19 21:06:47.087 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=4)
+2025-11-19 21:06:47.087 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 21:07:17.087 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 5 @ 2025-11-19T18:07:17.087793
+2025-11-19 21:07:17.088 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=5)
+2025-11-19 21:07:17.088 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 21:07:47.104 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 6 @ 2025-11-19T18:07:47.104139
+2025-11-19 21:07:47.104 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=6)
+2025-11-19 21:07:47.104 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 21:08:17.104 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 7 @ 2025-11-19T18:08:17.104957
+2025-11-19 21:08:17.105 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=7)
+2025-11-19 21:08:17.105 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 21:08:47.121 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 8 @ 2025-11-19T18:08:47.121220
+2025-11-19 21:08:47.121 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=8)
+2025-11-19 21:08:47.121 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 21:09:17.122 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 9 @ 2025-11-19T18:09:17.122757
+2025-11-19 21:09:17.123 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=9)
+2025-11-19 21:09:17.123 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 21:09:47.138 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 10 @ 2025-11-19T18:09:47.138903
+2025-11-19 21:09:47.139 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=10)
+2025-11-19 21:09:47.139 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 21:10:17.139 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 11 @ 2025-11-19T18:10:17.139787
+2025-11-19 21:10:17.140 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=11)
+2025-11-19 21:10:17.140 | WARNING  | context.pair_context:refresh_approved_strategies:26 - [PairContext] BTC/USDT 15m: no approved strategies found.
+2025-11-19 21:10:17.140 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 21:10:47.156 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 12 @ 2025-11-19T18:10:47.156541
+2025-11-19 21:10:47.156 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=12)
+2025-11-19 21:10:47.156 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 21:11:17.157 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 13 @ 2025-11-19T18:11:17.157874
+2025-11-19 21:11:17.158 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=13)
+2025-11-19 21:11:17.158 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 21:11:47.174 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 14 @ 2025-11-19T18:11:47.174043
+2025-11-19 21:11:47.174 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=14)
+2025-11-19 21:11:47.174 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 21:12:17.175 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 15 @ 2025-11-19T18:12:17.175607
+2025-11-19 21:12:17.175 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=15)
+2025-11-19 21:12:17.175 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 21:12:47.191 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 16 @ 2025-11-19T18:12:47.191796
+2025-11-19 21:12:47.192 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=16)
+2025-11-19 21:12:47.192 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 21:13:17.192 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 17 @ 2025-11-19T18:13:17.192753
+2025-11-19 21:13:17.193 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=17)
+2025-11-19 21:13:17.193 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 21:13:47.208 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 18 @ 2025-11-19T18:13:47.208669
+2025-11-19 21:13:47.208 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=18)
+2025-11-19 21:13:47.208 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 21:14:17.210 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 19 @ 2025-11-19T18:14:17.210333
+2025-11-19 21:14:17.210 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=19)
+2025-11-19 21:14:17.210 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 21:14:47.226 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 20 @ 2025-11-19T18:14:47.226561
+2025-11-19 21:14:47.226 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=20)
+2025-11-19 21:14:47.226 | WARNING  | __main__:_run_cycle_for_context:285 - [CTX BTC/USDT] [LAB GATE] No approved strategies for BTC/USDT 15m. Skipping.
+2025-11-19 21:14:58.809 | WARNING  | __main__:_handle_signal:453 - Shutdown signal received: 2
+2025-11-19 21:15:02.357 | WARNING  | __main__:start:200 - Stop event received, shutting down...
+2025-11-19 21:18:22.428 | INFO     | __main__:__init__:67 - AI Trading Swarm v2.5 starting...
+2025-11-19 21:18:22.430 | INFO     | lab.storage:init_db:90 - Lab DB initialized at data/lab.db
+2025-11-19 21:18:22.430 | INFO     | journal.storage:init_db:55 - Journal DB initialized at data/journal.db
+2025-11-19 21:18:22.431 | INFO     | context.pair_context:refresh_approved_strategies:30 - [PairContext] BTC/USDT 15m: approved strategies = ['btc_breakout_v1']
+2025-11-19 21:18:22.431 | INFO     | context.pair_context:build_contexts_from_config:77 - [Context] Built 1 pair contexts from config.
+2025-11-19 21:18:22.431 | INFO     | __main__:__init__:82 - Active contexts: BTC/USDT 15m
+2025-11-19 21:18:22.431 | INFO     | infrastructure.gpu_scheduler:__init__:11 - GPUSingleScheduler initialized (stub).
+2025-11-19 21:18:22.431 | INFO     | infrastructure.gpu_lru:__init__:8 - GPULRUManager initialized (stub).
+2025-11-19 21:18:22.431 | INFO     | agents.memory:__init__:58 - AgentMemory initialized for one:llama3.1:70b-instruct-q4_K_M @ data/memory/one/memory.sqlite
+2025-11-19 21:18:22.431 | INFO     | agents.base_agent:__init__:38 - TechnicalNewsAgent initialized for role=one, model=llama3.1:70b-instruct-q4_K_M
+2025-11-19 21:18:22.431 | INFO     | agents.memory:__init__:58 - AgentMemory initialized for two:mixtral:8x7b-instruct-v0.1-q4_K_M @ data/memory/two/memory.sqlite
+2025-11-19 21:18:22.431 | INFO     | agents.base_agent:__init__:38 - SentimentAnalyzerAgent initialized for role=two, model=mixtral:8x7b-instruct-v0.1-q4_K_M
+2025-11-19 21:18:22.432 | INFO     | agents.memory:__init__:58 - AgentMemory initialized for three:phi4:latest @ data/memory/three/memory.sqlite
+2025-11-19 21:18:22.432 | INFO     | agents.base_agent:__init__:38 - RiskManagerAgent initialized for role=three, model=phi4:latest
+2025-11-19 21:18:22.432 | INFO     | agents.memory:__init__:58 - AgentMemory initialized for four:qwen2.5:14b-instruct-q5_K_M @ data/memory/four/memory.sqlite
+2025-11-19 21:18:22.432 | INFO     | agents.base_agent:__init__:38 - StrategyDeveloperAgent initialized for role=four, model=qwen2.5:14b-instruct-q5_K_M
+2025-11-19 21:18:22.432 | INFO     | __main__:_init_agents:156 - Agents initialized: one, two, three, four
+2025-11-19 21:18:22.432 | INFO     | agents.consensus_engine:__init__:38 - EnhancedConsensusEngine initialized (asset=BTC)
+2025-11-19 21:18:22.432 | INFO     | onchain.whale_tracker:__init__:11 - OnChainIntelEngine initialized (stub).
+2025-11-19 21:18:22.432 | INFO     | options.flow_analyzer:__init__:11 - OptionsFlowAnalyzer initialized (stub).
+2025-11-19 21:18:22.432 | INFO     | social.telegram_scraper:__init__:10 - TelegramScraper initialized (stub).
+2025-11-19 21:18:22.432 | INFO     | trading.execution_engine:__init__:63 - ExecutionEngine initialized (Nautilus available=False, testnet=True, config=configs/nautilus_binance_testnet.yaml)
+2025-11-19 21:18:22.432 | INFO     | journal.storage:init_db:55 - Journal DB initialized at data/journal.db
+2025-11-19 21:18:22.432 | INFO     | journal.engine:__init__:20 - JournalEngine initialized.
+2025-11-19 21:18:22.437 | INFO     | __main__:_init_exchange:174 - CCXT exchange initialized: binance
+2025-11-19 21:18:22.437 | SUCCESS  | __main__:__init__:127 - TradingSwarmV25 fully initialized.
+2025-11-19 21:18:22.520 | INFO     | infrastructure.gpu_scheduler:initialize_models:17 - CUDA available; GPU ready for LLM offload.
+2025-11-19 21:18:22.520 | INFO     | events.event_bus:run:31 - EventBus running...
+2025-11-19 21:18:22.521 | DEBUG    | infrastructure.gpu_lru:periodic_maintenance:11 - GPULRUManager maintenance loop started ( stub ).
+2025-11-19 21:18:22.521 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 1 @ 2025-11-19T18:18:22.521398
+2025-11-19 21:18:22.521 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=1)
+2025-11-19 21:18:22.521 | INFO     | context.pair_context:refresh_approved_strategies:30 - [PairContext] BTC/USDT 15m: approved strategies = ['btc_breakout_v1']
+2025-11-19 21:18:22.524 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:18:22.524 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:18:22.524 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:18:22.524 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:18:22.524 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:18:52.540 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 2 @ 2025-11-19T18:18:52.540289
+2025-11-19 21:18:52.540 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=2)
+2025-11-19 21:18:52.542 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:18:52.542 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:18:52.543 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:18:52.543 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:18:52.543 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:19:22.544 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 3 @ 2025-11-19T18:19:22.544448
+2025-11-19 21:19:22.544 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=3)
+2025-11-19 21:19:22.546 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:19:22.547 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:19:22.547 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:19:22.547 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:19:22.547 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:19:52.563 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 4 @ 2025-11-19T18:19:52.563946
+2025-11-19 21:19:52.564 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=4)
+2025-11-19 21:19:52.565 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:19:52.567 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:19:52.567 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:19:52.567 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:19:52.567 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:20:22.567 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 5 @ 2025-11-19T18:20:22.567634
+2025-11-19 21:20:22.567 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=5)
+2025-11-19 21:20:22.569 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:20:22.570 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:20:22.570 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:20:22.570 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:20:22.570 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:20:52.585 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 6 @ 2025-11-19T18:20:52.585886
+2025-11-19 21:20:52.586 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=6)
+2025-11-19 21:20:52.588 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:20:52.588 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:20:52.589 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:20:52.589 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:20:52.589 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:21:22.589 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 7 @ 2025-11-19T18:21:22.589866
+2025-11-19 21:21:22.590 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=7)
+2025-11-19 21:21:22.591 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:21:22.592 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:21:22.592 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:21:22.592 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:21:22.592 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:21:52.608 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 8 @ 2025-11-19T18:21:52.608188
+2025-11-19 21:21:52.608 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=8)
+2025-11-19 21:21:52.609 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:21:52.610 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:21:52.610 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:21:52.611 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:21:52.611 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:22:22.612 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 9 @ 2025-11-19T18:22:22.612830
+2025-11-19 21:22:22.613 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=9)
+2025-11-19 21:22:22.615 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:22:22.615 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:22:22.615 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:22:22.615 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:22:22.615 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:22:52.632 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 10 @ 2025-11-19T18:22:52.632765
+2025-11-19 21:22:52.633 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=10)
+2025-11-19 21:22:52.634 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:22:52.635 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:22:52.635 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:22:52.635 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:22:52.635 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:23:22.636 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 11 @ 2025-11-19T18:23:22.636536
+2025-11-19 21:23:22.636 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=11)
+2025-11-19 21:23:22.637 | INFO     | context.pair_context:refresh_approved_strategies:30 - [PairContext] BTC/USDT 15m: approved strategies = ['btc_breakout_v1']
+2025-11-19 21:23:22.639 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:23:22.639 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:23:22.640 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:23:22.640 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:23:22.640 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:23:52.656 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 12 @ 2025-11-19T18:23:52.656530
+2025-11-19 21:23:52.656 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=12)
+2025-11-19 21:23:52.658 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:23:52.659 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:23:52.659 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:23:52.659 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:23:52.659 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:24:22.659 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 13 @ 2025-11-19T18:24:22.659867
+2025-11-19 21:24:22.660 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=13)
+2025-11-19 21:24:22.661 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:24:22.662 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:24:22.662 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:24:22.662 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:24:22.662 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:24:52.678 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 14 @ 2025-11-19T18:24:52.678608
+2025-11-19 21:24:52.678 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=14)
+2025-11-19 21:24:52.680 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:24:52.681 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:24:52.681 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:24:52.681 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:24:52.681 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:25:22.682 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 15 @ 2025-11-19T18:25:22.682403
+2025-11-19 21:25:22.682 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=15)
+2025-11-19 21:25:22.684 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:25:22.684 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:25:22.685 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:25:22.685 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:25:22.685 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:25:52.700 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 16 @ 2025-11-19T18:25:52.700439
+2025-11-19 21:25:52.700 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=16)
+2025-11-19 21:25:52.702 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:25:52.702 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:25:52.703 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:25:52.703 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:25:52.703 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:26:22.703 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 17 @ 2025-11-19T18:26:22.703786
+2025-11-19 21:26:22.704 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=17)
+2025-11-19 21:26:22.705 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:26:22.705 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:26:22.706 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:26:22.706 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:26:22.706 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:26:52.722 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 18 @ 2025-11-19T18:26:52.722816
+2025-11-19 21:26:52.723 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=18)
+2025-11-19 21:26:52.725 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:26:52.725 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:26:52.725 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:26:52.725 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:26:52.725 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:27:22.726 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 19 @ 2025-11-19T18:27:22.726958
+2025-11-19 21:27:22.727 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=19)
+2025-11-19 21:27:22.729 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:27:22.729 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:27:22.729 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:27:22.729 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:27:22.730 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:27:52.745 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 20 @ 2025-11-19T18:27:52.745924
+2025-11-19 21:27:52.746 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=20)
+2025-11-19 21:27:52.747 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:27:52.748 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:27:52.748 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:27:52.748 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:27:52.748 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:28:22.749 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 21 @ 2025-11-19T18:28:22.749796
+2025-11-19 21:28:22.750 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=21)
+2025-11-19 21:28:22.750 | INFO     | context.pair_context:refresh_approved_strategies:30 - [PairContext] BTC/USDT 15m: approved strategies = ['btc_breakout_v1']
+2025-11-19 21:28:22.752 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:28:22.752 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:28:22.752 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:28:22.752 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:28:22.752 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:28:52.768 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 22 @ 2025-11-19T18:28:52.768636
+2025-11-19 21:28:52.768 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=22)
+2025-11-19 21:28:52.770 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:28:52.771 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:28:52.771 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:28:52.771 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:28:52.771 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:29:22.772 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 23 @ 2025-11-19T18:29:22.772695
+2025-11-19 21:29:22.772 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=23)
+2025-11-19 21:29:22.774 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:29:22.774 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:29:22.775 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:29:22.775 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:29:22.775 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:29:52.791 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 24 @ 2025-11-19T18:29:52.791673
+2025-11-19 21:29:52.791 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=24)
+2025-11-19 21:29:52.792 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:29:52.793 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:29:52.793 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:29:52.794 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:29:52.794 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:30:22.795 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 25 @ 2025-11-19T18:30:22.795279
+2025-11-19 21:30:22.795 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=25)
+2025-11-19 21:30:22.797 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:30:22.797 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:30:22.797 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:30:22.797 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:30:22.797 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:30:52.813 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 26 @ 2025-11-19T18:30:52.813245
+2025-11-19 21:30:52.813 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=26)
+2025-11-19 21:30:52.815 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:30:52.816 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:30:52.816 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:30:52.816 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:30:52.816 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:31:22.817 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 27 @ 2025-11-19T18:31:22.817536
+2025-11-19 21:31:22.817 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=27)
+2025-11-19 21:31:22.819 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:31:22.820 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:31:22.820 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:31:22.820 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:31:22.820 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:31:52.836 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 28 @ 2025-11-19T18:31:52.836220
+2025-11-19 21:31:52.836 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=28)
+2025-11-19 21:31:52.838 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:31:52.838 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:31:52.838 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:31:52.839 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:31:52.839 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:32:22.840 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 29 @ 2025-11-19T18:32:22.840341
+2025-11-19 21:32:22.840 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=29)
+2025-11-19 21:32:22.842 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:32:22.842 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:32:22.842 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:32:22.842 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:32:22.843 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:32:52.845 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 30 @ 2025-11-19T18:32:52.844993
+2025-11-19 21:32:52.845 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=30)
+2025-11-19 21:32:52.847 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:32:52.848 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:32:52.848 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:32:52.848 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:32:52.848 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:33:22.849 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 31 @ 2025-11-19T18:33:22.849519
+2025-11-19 21:33:22.849 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=31)
+2025-11-19 21:33:22.850 | INFO     | context.pair_context:refresh_approved_strategies:30 - [PairContext] BTC/USDT 15m: approved strategies = ['btc_breakout_v1']
+2025-11-19 21:33:22.851 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:33:22.851 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:33:22.851 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:33:22.851 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:33:22.851 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:33:25.107 | WARNING  | __main__:_handle_signal:453 - Shutdown signal received: 2
+2025-11-19 21:33:38.002 | WARNING  | __main__:start:200 - Stop event received, shutting down...
+2025-11-19 21:33:43.448 | INFO     | __main__:__init__:67 - AI Trading Swarm v2.5 starting...
+2025-11-19 21:33:43.451 | INFO     | lab.storage:init_db:90 - Lab DB initialized at data/lab.db
+2025-11-19 21:33:43.451 | INFO     | journal.storage:init_db:55 - Journal DB initialized at data/journal.db
+2025-11-19 21:33:43.451 | INFO     | context.pair_context:refresh_approved_strategies:30 - [PairContext] BTC/USDT 15m: approved strategies = ['btc_breakout_v1']
+2025-11-19 21:33:43.451 | INFO     | context.pair_context:build_contexts_from_config:77 - [Context] Built 1 pair contexts from config.
+2025-11-19 21:33:43.451 | INFO     | __main__:__init__:82 - Active contexts: BTC/USDT 15m
+2025-11-19 21:33:43.451 | INFO     | infrastructure.gpu_scheduler:__init__:11 - GPUSingleScheduler initialized (stub).
+2025-11-19 21:33:43.452 | INFO     | infrastructure.gpu_lru:__init__:8 - GPULRUManager initialized (stub).
+2025-11-19 21:33:43.452 | INFO     | agents.memory:__init__:58 - AgentMemory initialized for one:llama3.1:70b-instruct-q4_K_M @ data/memory/one/memory.sqlite
+2025-11-19 21:33:43.452 | INFO     | agents.base_agent:__init__:38 - TechnicalNewsAgent initialized for role=one, model=llama3.1:70b-instruct-q4_K_M
+2025-11-19 21:33:43.452 | INFO     | agents.memory:__init__:58 - AgentMemory initialized for two:mixtral:8x7b-instruct-v0.1-q4_K_M @ data/memory/two/memory.sqlite
+2025-11-19 21:33:43.452 | INFO     | agents.base_agent:__init__:38 - SentimentAnalyzerAgent initialized for role=two, model=mixtral:8x7b-instruct-v0.1-q4_K_M
+2025-11-19 21:33:43.452 | INFO     | agents.memory:__init__:58 - AgentMemory initialized for three:phi4:latest @ data/memory/three/memory.sqlite
+2025-11-19 21:33:43.452 | INFO     | agents.base_agent:__init__:38 - RiskManagerAgent initialized for role=three, model=phi4:latest
+2025-11-19 21:33:43.453 | INFO     | agents.memory:__init__:58 - AgentMemory initialized for four:qwen2.5:14b-instruct-q5_K_M @ data/memory/four/memory.sqlite
+2025-11-19 21:33:43.453 | INFO     | agents.base_agent:__init__:38 - StrategyDeveloperAgent initialized for role=four, model=qwen2.5:14b-instruct-q5_K_M
+2025-11-19 21:33:43.453 | INFO     | __main__:_init_agents:156 - Agents initialized: one, two, three, four
+2025-11-19 21:33:43.453 | INFO     | agents.consensus_engine:__init__:38 - EnhancedConsensusEngine initialized (asset=BTC)
+2025-11-19 21:33:43.453 | INFO     | onchain.whale_tracker:__init__:11 - OnChainIntelEngine initialized (stub).
+2025-11-19 21:33:43.453 | INFO     | options.flow_analyzer:__init__:11 - OptionsFlowAnalyzer initialized (stub).
+2025-11-19 21:33:43.453 | INFO     | social.telegram_scraper:__init__:10 - TelegramScraper initialized (stub).
+2025-11-19 21:33:43.453 | INFO     | trading.execution_engine:__init__:63 - ExecutionEngine initialized (Nautilus available=False, testnet=True, config=configs/nautilus_binance_testnet.yaml)
+2025-11-19 21:33:43.453 | INFO     | journal.storage:init_db:55 - Journal DB initialized at data/journal.db
+2025-11-19 21:33:43.453 | INFO     | journal.engine:__init__:20 - JournalEngine initialized.
+2025-11-19 21:33:43.457 | INFO     | __main__:_init_exchange:174 - CCXT exchange initialized: binance
+2025-11-19 21:33:43.457 | SUCCESS  | __main__:__init__:127 - TradingSwarmV25 fully initialized.
+2025-11-19 21:33:43.533 | INFO     | infrastructure.gpu_scheduler:initialize_models:17 - CUDA available; GPU ready for LLM offload.
+2025-11-19 21:33:43.534 | INFO     | events.event_bus:run:31 - EventBus running...
+2025-11-19 21:33:43.534 | DEBUG    | infrastructure.gpu_lru:periodic_maintenance:11 - GPULRUManager maintenance loop started ( stub ).
+2025-11-19 21:33:43.534 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 1 @ 2025-11-19T18:33:43.534675
+2025-11-19 21:33:43.534 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=1)
+2025-11-19 21:33:43.535 | INFO     | context.pair_context:refresh_approved_strategies:30 - [PairContext] BTC/USDT 15m: approved strategies = ['btc_breakout_v1']
+2025-11-19 21:33:43.537 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:33:43.538 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:33:43.538 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:33:43.538 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:33:43.538 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:34:13.554 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 2 @ 2025-11-19T18:34:13.554102
+2025-11-19 21:34:13.554 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=2)
+2025-11-19 21:34:13.556 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:34:13.556 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:34:13.557 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:34:13.557 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:34:13.557 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:34:43.558 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 3 @ 2025-11-19T18:34:43.558109
+2025-11-19 21:34:43.558 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=3)
+2025-11-19 21:34:43.560 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:34:43.561 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:34:43.561 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:34:43.561 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:34:43.561 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:35:13.577 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 4 @ 2025-11-19T18:35:13.577019
+2025-11-19 21:35:13.577 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=4)
+2025-11-19 21:35:13.578 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:35:13.579 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:35:13.579 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:35:13.579 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:35:13.579 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:35:43.581 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 5 @ 2025-11-19T18:35:43.581053
+2025-11-19 21:35:43.581 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=5)
+2025-11-19 21:35:43.583 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:35:43.583 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:35:43.584 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:35:43.584 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:35:43.584 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:36:13.600 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 6 @ 2025-11-19T18:36:13.600142
+2025-11-19 21:36:13.600 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=6)
+2025-11-19 21:36:13.602 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:36:13.602 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:36:13.602 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:36:13.602 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:36:13.602 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:36:43.603 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 7 @ 2025-11-19T18:36:43.603452
+2025-11-19 21:36:43.603 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=7)
+2025-11-19 21:36:43.605 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:36:43.605 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:36:43.606 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:36:43.606 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:36:43.606 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:37:13.622 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 8 @ 2025-11-19T18:37:13.622592
+2025-11-19 21:37:13.622 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=8)
+2025-11-19 21:37:13.624 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:37:13.625 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:37:13.625 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:37:13.625 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:37:13.625 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:37:43.626 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 9 @ 2025-11-19T18:37:43.626949
+2025-11-19 21:37:43.627 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=9)
+2025-11-19 21:37:43.629 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:37:43.629 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:37:43.629 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:37:43.629 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:37:43.629 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:38:13.645 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 10 @ 2025-11-19T18:38:13.645565
+2025-11-19 21:38:13.645 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=10)
+2025-11-19 21:38:13.647 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:38:13.648 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:38:13.648 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:38:13.648 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:38:13.648 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:38:43.649 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 11 @ 2025-11-19T18:38:43.649040
+2025-11-19 21:38:43.649 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=11)
+2025-11-19 21:38:43.649 | INFO     | context.pair_context:refresh_approved_strategies:30 - [PairContext] BTC/USDT 15m: approved strategies = ['btc_breakout_v1']
+2025-11-19 21:38:43.651 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:38:43.652 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:38:43.652 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:38:43.652 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:38:43.652 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:39:13.668 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 12 @ 2025-11-19T18:39:13.668560
+2025-11-19 21:39:13.668 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=12)
+2025-11-19 21:39:13.670 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:39:13.671 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:39:13.671 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:39:13.671 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:39:13.671 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:39:43.672 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 13 @ 2025-11-19T18:39:43.672503
+2025-11-19 21:39:43.672 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=13)
+2025-11-19 21:39:43.674 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:39:43.675 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:39:43.675 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:39:43.675 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:39:43.675 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:40:13.691 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 14 @ 2025-11-19T18:40:13.691298
+2025-11-19 21:40:13.691 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=14)
+2025-11-19 21:40:13.693 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:40:13.693 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:40:13.693 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:40:13.693 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:40:13.694 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:40:43.694 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 15 @ 2025-11-19T18:40:43.694471
+2025-11-19 21:40:43.694 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=15)
+2025-11-19 21:40:43.696 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:40:43.696 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:40:43.696 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:40:43.696 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:40:43.696 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:41:13.712 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 16 @ 2025-11-19T18:41:13.712821
+2025-11-19 21:41:13.713 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=16)
+2025-11-19 21:41:13.715 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:41:13.715 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:41:13.715 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:41:13.715 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:41:13.715 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:41:43.716 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 17 @ 2025-11-19T18:41:43.716140
+2025-11-19 21:41:43.716 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=17)
+2025-11-19 21:41:43.718 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:41:43.719 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:41:43.719 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:41:43.719 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:41:43.720 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:42:13.736 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 18 @ 2025-11-19T18:42:13.736136
+2025-11-19 21:42:13.736 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=18)
+2025-11-19 21:42:13.738 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:42:13.738 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:42:13.738 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:42:13.739 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:42:13.739 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:42:43.740 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 19 @ 2025-11-19T18:42:43.740347
+2025-11-19 21:42:43.740 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=19)
+2025-11-19 21:42:43.742 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:42:43.742 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:42:43.742 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:42:43.742 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:42:43.742 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:43:13.758 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 20 @ 2025-11-19T18:43:13.758760
+2025-11-19 21:43:13.759 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=20)
+2025-11-19 21:43:13.761 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:43:13.761 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:43:13.761 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:43:13.761 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:43:13.761 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:43:43.761 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 21 @ 2025-11-19T18:43:43.761890
+2025-11-19 21:43:43.762 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=21)
+2025-11-19 21:43:43.762 | INFO     | context.pair_context:refresh_approved_strategies:30 - [PairContext] BTC/USDT 15m: approved strategies = ['btc_breakout_v1']
+2025-11-19 21:43:43.764 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:43:43.764 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:43:43.764 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:43:43.764 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:43:43.764 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:44:13.781 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 22 @ 2025-11-19T18:44:13.781971
+2025-11-19 21:44:13.782 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=22)
+2025-11-19 21:44:13.783 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:44:13.784 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:44:13.784 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:44:13.784 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:44:13.784 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:44:43.785 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 23 @ 2025-11-19T18:44:43.785319
+2025-11-19 21:44:43.785 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=23)
+2025-11-19 21:44:43.787 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:44:43.787 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:44:43.787 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:44:43.787 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:44:43.787 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:45:13.804 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 24 @ 2025-11-19T18:45:13.804170
+2025-11-19 21:45:13.804 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=24)
+2025-11-19 21:45:13.806 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:45:13.806 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:45:13.806 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:45:13.806 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:45:13.806 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:45:43.808 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 25 @ 2025-11-19T18:45:43.808241
+2025-11-19 21:45:43.808 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=25)
+2025-11-19 21:45:43.811 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:45:43.811 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:45:43.811 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:45:43.811 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:45:43.811 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:46:13.826 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 26 @ 2025-11-19T18:46:13.826951
+2025-11-19 21:46:13.827 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=26)
+2025-11-19 21:46:13.828 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:46:13.829 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:46:13.829 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:46:13.829 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:46:13.829 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:46:43.829 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 27 @ 2025-11-19T18:46:43.829965
+2025-11-19 21:46:43.830 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=27)
+2025-11-19 21:46:43.831 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:46:43.832 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:46:43.832 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:46:43.832 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:46:43.832 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:47:13.848 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 28 @ 2025-11-19T18:47:13.848664
+2025-11-19 21:47:13.848 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=28)
+2025-11-19 21:47:13.850 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:47:13.851 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:47:13.851 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:47:13.851 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:47:13.851 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:47:43.852 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 29 @ 2025-11-19T18:47:43.852061
+2025-11-19 21:47:43.852 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=29)
+2025-11-19 21:47:43.854 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:47:43.854 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:47:43.854 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:47:43.854 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:47:43.854 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:48:13.871 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 30 @ 2025-11-19T18:48:13.871681
+2025-11-19 21:48:13.871 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=30)
+2025-11-19 21:48:13.873 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:48:13.873 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:48:13.874 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:48:13.874 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:48:13.874 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:48:43.875 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 31 @ 2025-11-19T18:48:43.875150
+2025-11-19 21:48:43.875 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=31)
+2025-11-19 21:48:43.875 | INFO     | context.pair_context:refresh_approved_strategies:30 - [PairContext] BTC/USDT 15m: approved strategies = ['btc_breakout_v1']
+2025-11-19 21:48:43.877 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:48:43.878 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:48:43.878 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:48:43.878 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:48:43.878 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:49:13.894 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 32 @ 2025-11-19T18:49:13.894174
+2025-11-19 21:49:13.894 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=32)
+2025-11-19 21:49:13.896 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:49:13.896 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:49:13.896 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:49:13.896 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:49:13.896 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:49:43.896 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 33 @ 2025-11-19T18:49:43.896785
+2025-11-19 21:49:43.897 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=33)
+2025-11-19 21:49:43.899 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:49:43.900 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:49:43.900 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:49:43.900 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:49:43.900 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:50:13.916 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 34 @ 2025-11-19T18:50:13.916285
+2025-11-19 21:50:13.916 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=34)
+2025-11-19 21:50:13.918 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:50:13.918 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:50:13.918 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:50:13.918 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:50:13.918 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:50:43.920 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 35 @ 2025-11-19T18:50:43.920034
+2025-11-19 21:50:43.920 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=35)
+2025-11-19 21:50:43.922 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 21:50:43.922 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 21:50:43.922 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 21:50:43.922 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 21:50:43.922 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 21:51:00.761 | WARNING  | __main__:_handle_signal:453 - Shutdown signal received: 2
+2025-11-19 21:51:13.937 | WARNING  | __main__:start:200 - Stop event received, shutting down...
+2025-11-19 22:20:32.943 | INFO     | __main__:__init__:67 - AI Trading Swarm v2.5 starting...
+2025-11-19 22:20:32.946 | INFO     | lab.storage:init_db:90 - Lab DB initialized at data/lab.db
+2025-11-19 22:20:32.946 | INFO     | journal.storage:init_db:55 - Journal DB initialized at data/journal.db
+2025-11-19 22:20:32.946 | INFO     | context.pair_context:refresh_approved_strategies:30 - [PairContext] BTC/USDT 15m: approved strategies = ['btc_breakout_v1']
+2025-11-19 22:20:32.946 | INFO     | context.pair_context:build_contexts_from_config:77 - [Context] Built 1 pair contexts from config.
+2025-11-19 22:20:32.946 | INFO     | __main__:__init__:82 - Active contexts: BTC/USDT 15m
+2025-11-19 22:20:32.946 | INFO     | infrastructure.gpu_scheduler:__init__:11 - GPUSingleScheduler initialized (stub).
+2025-11-19 22:20:32.946 | INFO     | infrastructure.gpu_lru:__init__:8 - GPULRUManager initialized (stub).
+2025-11-19 22:20:32.947 | INFO     | agents.memory:__init__:58 - AgentMemory initialized for one:llama3.1:70b-instruct-q4_K_M @ data/memory/one/memory.sqlite
+2025-11-19 22:20:32.947 | INFO     | agents.base_agent:__init__:38 - TechnicalNewsAgent initialized for role=one, model=llama3.1:70b-instruct-q4_K_M
+2025-11-19 22:20:32.947 | INFO     | agents.memory:__init__:58 - AgentMemory initialized for two:mixtral:8x7b-instruct-v0.1-q4_K_M @ data/memory/two/memory.sqlite
+2025-11-19 22:20:32.947 | INFO     | agents.base_agent:__init__:38 - SentimentAnalyzerAgent initialized for role=two, model=mixtral:8x7b-instruct-v0.1-q4_K_M
+2025-11-19 22:20:32.947 | INFO     | agents.memory:__init__:58 - AgentMemory initialized for three:phi4:latest @ data/memory/three/memory.sqlite
+2025-11-19 22:20:32.947 | INFO     | agents.base_agent:__init__:38 - RiskManagerAgent initialized for role=three, model=phi4:latest
+2025-11-19 22:20:32.948 | INFO     | agents.memory:__init__:58 - AgentMemory initialized for four:qwen2.5:14b-instruct-q5_K_M @ data/memory/four/memory.sqlite
+2025-11-19 22:20:32.948 | INFO     | agents.base_agent:__init__:38 - StrategyDeveloperAgent initialized for role=four, model=qwen2.5:14b-instruct-q5_K_M
+2025-11-19 22:20:32.948 | INFO     | __main__:_init_agents:156 - Agents initialized: one, two, three, four
+2025-11-19 22:20:32.948 | INFO     | agents.consensus_engine:__init__:38 - EnhancedConsensusEngine initialized (asset=BTC)
+2025-11-19 22:20:32.948 | INFO     | onchain.whale_tracker:__init__:11 - OnChainIntelEngine initialized (stub).
+2025-11-19 22:20:32.948 | INFO     | options.flow_analyzer:__init__:11 - OptionsFlowAnalyzer initialized (stub).
+2025-11-19 22:20:32.948 | INFO     | social.telegram_scraper:__init__:10 - TelegramScraper initialized (stub).
+2025-11-19 22:20:32.948 | INFO     | trading.execution_engine:__init__:63 - ExecutionEngine initialized (Nautilus available=False, testnet=True, config=configs/nautilus_binance_testnet.yaml)
+2025-11-19 22:20:32.948 | INFO     | journal.storage:init_db:55 - Journal DB initialized at data/journal.db
+2025-11-19 22:20:32.948 | INFO     | journal.engine:__init__:20 - JournalEngine initialized.
+2025-11-19 22:20:32.952 | INFO     | __main__:_init_exchange:174 - CCXT exchange initialized: binance
+2025-11-19 22:20:32.953 | SUCCESS  | __main__:__init__:127 - TradingSwarmV25 fully initialized.
+2025-11-19 22:20:33.032 | INFO     | infrastructure.gpu_scheduler:initialize_models:17 - CUDA available; GPU ready for LLM offload.
+2025-11-19 22:20:33.033 | INFO     | events.event_bus:run:31 - EventBus running...
+2025-11-19 22:20:33.033 | DEBUG    | infrastructure.gpu_lru:periodic_maintenance:11 - GPULRUManager maintenance loop started ( stub ).
+2025-11-19 22:20:33.033 | INFO     | __main__:_main_loop:216 - [GLOBAL] Iteration 1 @ 2025-11-19T19:20:33.033516
+2025-11-19 22:20:33.033 | INFO     | __main__:_run_cycle_for_context:278 - [CTX BTC/USDT 15m] Cycle start (iter=1)
+2025-11-19 22:20:33.033 | INFO     | context.pair_context:refresh_approved_strategies:30 - [PairContext] BTC/USDT 15m: approved strategies = ['btc_breakout_v1']
+2025-11-19 22:20:33.036 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent one failed: [Errno 111] Connection refused
+2025-11-19 22:20:33.036 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent three failed: [Errno 111] Connection refused
+2025-11-19 22:20:33.036 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent four failed: [Errno 111] Connection refused
+2025-11-19 22:20:33.037 | ERROR    | agents.consensus_engine:_call_agent:70 - Agent two failed: [Errno 111] Connection refused
+2025-11-19 22:20:33.037 | INFO     | __main__:_run_cycle_for_context:297 - [CTX BTC/USDT] No agent responses this cycle.
+2025-11-19 22:20:42.203 | WARNING  | __main__:_handle_signal:453 - Shutdown signal received: 2
+2025-11-19 22:20:48.041 | WARNING  | __main__:start:200 - Stop event received, shutting down...
